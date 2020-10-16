@@ -1,0 +1,290 @@
+.featuredCollectionsContainer {
+    padding: 0 80px;
+    margin: 0 0 150px 0;
+    position: relative;
+
+    & .featuredCollectionsHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 0;
+
+        & > p:first-child {
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            opacity: 1;
+            margin: 0 0 10px 0;
+        }
+
+        & > p:last-child {
+            max-width: 260px;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+    & .featuredCollectionsViewAll {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-bottom: 6px;
+
+        & > p {
+            background-color: #fafafa;
+            text-align: right;
+            font-family: Montserrat, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #000000;
+            opacity: 1;
+            margin: 0;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+    }
+
+    & .featuredCollectionsItems::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .featuredCollectionsItems {
+        display: grid;
+        grid-template-columns: repeat(1000, 208px);
+        grid-auto-flow: column;
+        column-gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        position: relative;
+        padding-bottom: 100px;
+
+        & .featuredCollectionsItem {
+            display: flex;
+            flex-direction: column;
+            max-width: 250px;
+            max-height: 370px;
+            background-color: #fafafa;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+
+            & .featuredCollectionsProductTop {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 4px;
+
+                & .featuredCollectionsProductThumbImage {
+                    & > img {
+                        height: 40px;
+                    }
+                }
+
+                & .featuredCollectionsProductRatings {
+                    & > ul {
+                        display: flex;
+                        list-style-type: none;
+
+                        & > li {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+
+            & .featuredCollectionsProductImage {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & > img {
+                    height: 140px;
+                }
+            }
+
+            & .featuredCollectionsProductInfo {
+                & .featuredCollectionsProductName {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    height: 68px;
+                    text-align: center;
+                    font-family: Montserrat, sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    opacity: 1;
+                    margin: 0;
+
+                    & .featuredCollectionsBrandName {
+                        text-align: center;
+                        font-family: Montserrat, sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        opacity: 1;
+                        margin: 0;
+                    }
+                }
+
+                & .featuredCollectionsProductDescription {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    height: 40px;
+                    text-align: center;
+                    font-family: Montserrat, sans-serif;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #6b6b6b;
+                    letter-spacing: 1px;
+                    opacity: 1;
+                    margin: 0;
+                }
+
+                & .featuredCollectionsProductPrice {
+                    text-align: center;
+                    font-family: Montserrat, sans-serif;
+                    font-size: 8px;
+                    font-weight: 500;
+                    color: #6b6b6b;
+                    letter-spacing: 1px;
+                    opacity: 1;
+                    margin: 0;
+                    text-decoration: line-through;
+
+                    & > span {
+                        text-align: center;
+                        font-family: Montserrat, sans-serif;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        opacity: 1;
+                        margin: 0;
+                    }
+                }
+
+                & .featuredCollectionsProductSalesPrice {
+                    text-align: center;
+                    font-family: Montserrat, sans-serif;
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: #212121;
+                    letter-spacing: 1px;
+                    opacity: 1;
+                    margin: 0;
+
+                    & > span {
+                        text-align: center;
+                        font-family: Montserrat, sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        opacity: 1;
+                        margin: 0;
+                    }
+                }
+            }
+
+            & .featuredCollectionsProductBottom {
+                display: grid;
+                grid-template-columns: repeat(3, 4fr);
+                position: relative;
+                top: 2px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fafafa;
+                margin: 0 -10px;
+
+                & .featuredCollectionsProductViewDetail,
+                & .featuredCollectionsProductShoppingBag,
+                & .featuredCollectionsProductWishlist {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 0;
+                }
+
+                & .featuredCollectionsProductViewDetail,
+                & .featuredCollectionsProductShoppingBag {
+                    border-right: 1px solid #d3d3d3;
+                }
+            }
+
+            & .featuredCollectionsProductBottom {
+                & .featuredCollectionsProductViewDetail:hover,
+                & .featuredCollectionsProductShoppingBag:hover,
+                & .featuredCollectionsProductWishlist:hover {
+                    background-color: #f5f5f5;
+                }
+
+                & .featuredCollectionsProductShoppingBag:hover {
+                    position: relative;
+
+                    & > svg > g:first-child > g:first-child {
+                        display: none;
+                    }
+
+                    & > svg > g:first-child > g:last-child {
+                        position: absolute;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+
+        & .featuredCollectionsItem:hover {
+            & .featuredCollectionsProductBottom {
+                display: grid;
+            }
+        }
+    }
+
+    & .featuredCollectionsLeftArrow {
+        position: absolute;
+        left: 50px;
+        top: 55%;
+        margin-top: -8px;
+        background: #fafafa;
+        padding: 8px 6px;
+        cursor: pointer;
+    }
+
+    & .featuredCollectionsRightArrow {
+        position: absolute;
+        right: 50px;
+        top: 55%;
+        margin-top: -8px;
+        background: #fafafa;
+        padding: 8px 6px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1024px) {
+    .featuredCollectionsContainer {
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .featuredCollectionsContainer {
+        margin: 0 25px;
+    }
+}
